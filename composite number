@@ -1,0 +1,20 @@
+#include <stdio.h>
+float is_composite(int num)
+ {
+  for (int i = 2; i < num; i++)
+    if (!(num % i)) return true;
+  return false;
+}
+int main() {
+  int a, i, numbers[100];
+  printf("Enter size of array: ");
+  scanf("%d", &a);
+  printf("Enter elements: ");
+  for (i = 0; i < a; i++) 
+  scanf("%d", &numbers[i]);
+  printf("Composite numbers: ");
+  for (i = 0; i < a; i++)
+    if (is_composite(numbers[i]))
+	 printf("%d ", numbers[i]);
+  return 0;
+}
